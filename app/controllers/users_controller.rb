@@ -9,6 +9,9 @@ class UsersController < ApplicationController
     redirect_to '/users/new'
   end
 
-  def welcome
+  private
+
+  def user_params
+    params.require(:user).permit(:name, :password, :password_confirmation)
   end
 end
