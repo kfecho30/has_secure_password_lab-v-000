@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
   def create
     user = User.find_or_create_by(:name => params[:name])
-    redirect_to '/welcome'
+    redirect_to 'users/new'
   end
 
   def welcome
