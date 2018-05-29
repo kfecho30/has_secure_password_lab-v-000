@@ -3,6 +3,6 @@ class UsersController < ApplicationController
   end
 
   def create
-    User.find_or_create_by(:name => params[:name])
+    user = User.find_or_create_by(:name => params[:name])
   end
 end
